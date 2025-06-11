@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test1" parallel="classes">
+  <parameter name="browser" value="chrome"></parameter>
+  
+  <!--At the time of group testing this can use(inclue and exclude)-->
+<!--   <groups> -->
+<!--   <run> -->
+<!--   <include name="sanity"/> -->
+<!--   </run> -->
+<!--   </groups> -->
+
+    <classes>
+      <!--<class name="com.testCases.TC_001_Elements"/>-->
+      <!--<class name="com.testCases.TC_002_Forms"/>-->
+      <!--<class name="com.testCases.TC_003_AlertsFrameAndWindows"/>-->
+      <!--<class name="com.testCases.TC_004_Widgets"/>-->
+      <class name="com.testCases.TC_005_Interactions"/>
+      <class name="demoQAAutomation.demoQAAutomation.AppTest"/>
+      <class name="com.baseClass.BaseClass"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <!-- For parallel testing-->
+<!--    <test thread-count="5" name="Test2"> -->
+<!--   <parameter name="broser" value="edge"></parameter> -->
+<!--     <classes> -->
+<!--       <class name="com.testCases.TC_001_Elements"/> -->
+<!--       <class name="com.testCases.TC_002_Forms"/> -->
+<!--       <class name="com.testCases.TC_003_AlertsFrameAndWindows"/> -->
+<!--       <class name="com.testCases.TC_004_Widgets"/> -->
+<!--       <class name="com.testCases.TC_005_Interactions"/> -->
+<!--       <class name="demoQAAutomation.demoQAAutomation.AppTest"/> -->
+<!--       <class name="com.baseClass.BaseClass"/> -->
+<!--     </classes> -->
+<!--   </test> -->
+  
+</suite> <!-- Suite -->

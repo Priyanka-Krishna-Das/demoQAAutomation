@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test1(failed)" parallel="classes">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.testCases.TC_005_Interactions">
+        <methods>
+          <include name="goToDropable"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.testCases.TC_005_Interactions -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
