@@ -1,8 +1,13 @@
 package com.baseClass;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +15,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 import com.utilities.PropertiesClass;
@@ -51,6 +57,29 @@ public class BaseClass extends PropertiesClass{
 		return total;
 	}
 	
+	
+	@DataProvider(name="data")
+	public static void data() throws IOException
+	{
+		try 
+		{
+	        String filePath = "/demoQAAutomation/src/test/java/com/utilities/testDataForDemoQA.xlsx";
+	        FileInputStream file = new FileInputStream(filePath);
+	        
+	        System.out.println("File opened successfully");
+	        
+	        XSSFWorkbook workbook=new XSSFWorkbook(file);
+	        
+	        XSSFSheet row10= workbook.getSheet("Sheet1");
+	        XSSFCell valueReader = row10.getRow(1).getCell(0);
+	        String row1= valueReader.getStringCellValue();
+	        
+	        
+	        
+	    } catch (FileNotFoundException e) {
+	        e.printStackTrace();
+	    }
+	}
 	
 	
 

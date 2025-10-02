@@ -28,11 +28,12 @@ public class TC_002_Forms extends BaseClass{
 		frm.displayTxtFormsSectionOpenConfirmation();
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3, dataProvider="data")
 	public void fillFormAndSubmit() throws IOException, InterruptedException
 	{
 		frm=new Forms(driver);
-		frm.enterTxtFirstName(getFirstNameForms());
+		//frm.enterTxtFirstName(getFirstNameForms());
+		frm.enterTxtFirstName("data");
 		frm.enterTxtLastName(getLastNameForms());
 		frm.enterTxtEmail(getGmailForms());
 		frm.selectRadioBtnGender();

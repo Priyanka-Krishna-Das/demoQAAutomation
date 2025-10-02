@@ -162,7 +162,7 @@ public class AlertFrameAndWindows extends BaseClass{
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", btnNewWindowMessage);
 		
-         Set<String> handels = driver.getWindowHandles(); //parId,childID,subChil.........
+        Set<String> handels = driver.getWindowHandles(); //parId,childID,subChil.........
 		
 		Iterator options=handels.iterator();
 		String parentId= (String) options.next();
